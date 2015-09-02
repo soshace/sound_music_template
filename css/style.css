@@ -1,0 +1,128 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242a2c;
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 30px;
+    text-decoration: none;
+    height: 50px;
+}
+    .logo__img {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .logo__text {
+        font-family: "BERNIER-Shade", sans-serif;
+        color: white;
+        font-size: 32px;
+    }
+
+.header {
+    height: 95px;
+    padding-top: 45px;
+    background-image: url(../img/header-bg.jpg);
+    background-size: cover;
+}
+    .header__sub {
+        height: 50px;
+        line-height: 50px;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+
+.header-nav {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-size: 0;
+    vertical-align: top;
+}
+    .header-nav__item {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+    }
+    .header-nav__link {
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: 13px;
+        color: #fff;
+        display: inline-block;
+        padding: 0 10px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+        .header-nav__link:hover {
+            background-color: white;
+            color: black;
+        }
+        .header-nav__link.active {
+            font-family: "Roboto-Thin", sans-serif;
+        }
+
+.header-credits {
+    color: #8adbcc;
+    display: inline-block;
+    float: right;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s ease;
+    height: 50px;
+    font-size: 13px;
+    font-family: "Roboto-Bold", sans-serif;
+}
+
+.header-credits:hover {
+    border-bottom: 2px solid white;
+}
+    .header-credits__label {
+        display: inline-block;
+    }
+    .header-credits__value {
+        display: inline-block;
+    }
+    .header-credits__icon {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+
+.header-settings {
+    float: right;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s ease;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.header-settings:hover {
+    border-bottom: 2px solid white;
+}
+    .header-settings__label {
+        font-family: "Roboto-Thin", sans-serif;
+        font-size: 13px;
+    }
+    .header-settings__icon {
+        vertical-align: middle;
+    }
+    .header-settings__dropdown {
+
+    }
