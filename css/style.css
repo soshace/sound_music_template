@@ -1,9 +1,20 @@
 *, *:after, *:before {
     box-sizing: border-box;
 }
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+    width: 0;
+    height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+
 
 body {
     background-color: #242a2c;
+    min-width: 1024px;
 }
 
 .container {
@@ -15,7 +26,7 @@ body {
 
 .logo {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 70px;
     text-decoration: none;
     height: 50px;
 }
@@ -34,6 +45,7 @@ body {
     padding-top: 45px;
     background-image: url(../img/header-bg.jpg);
     background-size: cover;
+    margin-bottom: 30px;
 }
     .header__sub {
         height: 50px;
@@ -119,10 +131,98 @@ body {
     .header-settings__label {
         font-family: "Roboto-Thin", sans-serif;
         font-size: 13px;
+        vertical-align: middle;
     }
     .header-settings__icon {
         vertical-align: middle;
     }
-    .header-settings__dropdown {
 
+.aside {
+    float: left;
+    width: 160px;
+    padding-top: 10px;
+}
+    .aside__username {
+        font-family: "Roboto-Thin", sans-serif;
+        font-size: 17px;
+        color: white;
+        height: 40px;
+        border-bottom: 1px solid white;
+        text-align: right;
+        padding-right: 20px;
     }
+
+.aside-menu {
+    padding: 0;
+    margin: 0;
+}
+    .aside-menu__block {
+        padding: 0;
+    }
+        .aside-menu__block:nth-child(even) {
+            background-color: #1D2021;
+        }
+        .aside-menu__block:nth-child(odd) {
+            background-color: #000000;
+        }
+    .aside-menu__header {
+        display: block;
+        font-size: 16px;
+        color: white;
+        font-family: "Roboto-Light", sans-serif;
+        cursor: pointer;
+        padding: 15px 20px;
+        text-align: right;
+        border-bottom: 1px solid transparent;
+        transition: border 0.3s ease;
+    }
+        .aside-menu__header:hover, .aside-menu__header.active {
+            font-family: "Roboto-Bold", sans-serif;
+        }
+        .aside-menu__header:hover {
+            border-bottom: 1px solid white;
+        }
+        .aside-menu__header--label {
+            color: #3ACBB2;
+        }
+
+    .aside-menu__list {
+        display: none;
+        padding-bottom: 10px;
+    }
+    .aside-menu__item {
+        display: block;
+        text-align: right;
+        padding: 10px 20px;
+        font-family: "Roboto-Light", sans-serif;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+        .aside-menu__item:hover, .aside-menu__item.active {
+            font-family: "Roboto-Bold", sans-serif;
+        }
+    .general {
+        float: left;
+        margin-left: 25px;
+        width: calc(1024px - 185px);
+    }
+        .general-heading {
+            border-bottom: 2px solid white;
+            padding:5px 0;
+        }
+        .general-heading__bandname {
+            float: left;
+            font-size: 28px;
+            color: white;
+            font-family: "Roboto-Bold", sans-serif;
+        }
+        .general-heading__general {
+            float: right;
+            color: white;
+            position: relative;
+            top: 15px;
+            font-size: 14px;
+            font-family: "Roboto-Bold", sans-serif;
+        }
