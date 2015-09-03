@@ -33,11 +33,7 @@ body {
     .logo__img {
         display: inline-block;
         margin-right: 10px;
-    }
-    .logo__text {
-        font-family: "BERNIER-Shade", sans-serif;
-        color: white;
-        font-size: 32px;
+        vertical-align: middle;
     }
 
 .header {
@@ -78,11 +74,11 @@ body {
         height: 50px;
         line-height: 50px;
         text-decoration: none;
+        border-bottom: 2px solid transparent;
         transition: all 0.3s ease;
     }
         .header-nav__link:hover {
-            background-color: white;
-            color: black;
+            border-bottom: 2px solid white;
         }
         .header-nav__link.active {
             font-family: "Roboto-Thin", sans-serif;

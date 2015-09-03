@@ -1,32 +1,4 @@
 @font-face {
-    font-family: "BERNIER-Regular";
-    src: url("fonts/BERNIER-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "BERNIER-Shade";
-    src: url("fonts/BERNIER-Shade.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "ionicons";
-    src: url("fonts/ionicons.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Roboto-Black";
-    src: url("fonts/Roboto-Black.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
     font-family: "Roboto-Bold";
     src: url("fonts/Roboto-Bold.ttf") format("truetype");
     font-style: normal;
@@ -36,20 +8,6 @@
 @font-face {
     font-family: "Roboto-Light";
     src: url("fonts/Roboto-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Roboto-Medium";
-    src: url("fonts/Roboto-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Roboto-Regular";
-    src: url("fonts/Roboto-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
