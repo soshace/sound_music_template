@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/fonts.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="js/datamaps.world.min.js"></script>
+
 </head>
 <body>
 
@@ -23,8 +27,23 @@
                     <li class="header-nav__item">
                         <a href="#" class="header-nav__link">Home</a>
                     </li>
-                    <li class="header-nav__item">
-                        <a href="#" class="header-nav__link active">Dashboard</a>
+                    <li class="header-nav__item js-header-dropdown">
+                        <a href="#" class="header-nav__link">Dashboard</a>
+                        <img class="header__dropdown-icon" src="img/icon--dropdown.png" alt=""/>
+                        <ul class="header-dropdown">
+                            <li class="header-dropdown__item">
+                                <a href="#" class="header-dropdown__link">Musician</a>
+                            </li>
+                            <li class="header-dropdown__item">
+                                <a href="#" class="header-dropdown__link">Venue</a>
+                            </li>
+                            <li class="header-dropdown__item">
+                                <a href="#" class="header-dropdown__link">Brand</a>
+                            </li>
+                            <li class="header-dropdown__item">
+                                <a href="#" class="header-dropdown__link">Personal</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="header-nav__item">
                         <a href="#" class="header-nav__link">About</a>
@@ -34,17 +53,31 @@
                     </li>
                 </ul>
 
-                <a href="#" class="header-settings">
+                <div class="header-settings header-nav__item js-header-dropdown">
                     <img class="header-settings__icon" src="img/icon--settings.png" alt="">
                     <span class="header-settings__label">User's name</span>
-                    <img class="header-settings__dropdown" src="img/icon--dropdown.png" alt=""/>
-                </a>
+                    <img class="header__dropdown-icon" src="img/icon--dropdown.png" alt=""/>
+                    <ul class="header-dropdown">
+                        <li class="header-dropdown__item">
+                            <a href="#" class="header-dropdown__link">Musician</a>
+                        </li>
+                        <li class="header-dropdown__item">
+                            <a href="#" class="header-dropdown__link">Venue</a>
+                        </li>
+                        <li class="header-dropdown__item">
+                            <a href="#" class="header-dropdown__link">Brand</a>
+                        </li>
+                        <li class="header-dropdown__item">
+                            <a href="#" class="header-dropdown__link">Personal</a>
+                        </li>
+                    </ul>
+                </div>
 
-                <a href="#" class="header-credits">
+                <div class="header-credits">
                     <span class="header-credits__label">Credits:</span>
                     <span class="header-credits__value">1200</span>
                     <img src="img/icon--credits.png" class="header-credits__icon" alt=""/>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -94,11 +127,24 @@
                     </div>
                 </nav>
             </aside>
+
             <section class="general">
+
                 <div class="general-heading clearfix">
                     <span class="general-heading__bandname">Band 1 Name</span>
                     <span class="general-heading__general">General</span>
                 </div>
+
+                <div class="container clearfix">
+                    <div class="soc-media">
+                        <div class="soc-media__header">Social Media</div>
+                        <div class="soc-media__scene">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="soundMobsMap"></div>
             </section>
 
         </div>

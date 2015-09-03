@@ -48,6 +48,9 @@ body {
         line-height: 50px;
         background-color: rgba(0,0,0,0.8);
     }
+    .header__dropdown-icon {
+        vertical-align: baseline;
+    }
 
 
 .header-nav {
@@ -63,7 +66,21 @@ body {
         margin: 0;
         padding: 0;
         height: 50px;
+        position: relative;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
+        .header-nav__item:hover {
+            border-bottom: 2px solid white;
+        }
+        .header-nav__item .header__dropdown-icon {
+            transition: transform 0.3s ease;
+            transform: rotate(0deg);
+        }
+        .header-nav__item.active .header__dropdown-icon{
+            transform: rotate(180deg);
+        }
     .header-nav__link {
         font-family: "Roboto-Bold", sans-serif;
         font-size: 13px;
@@ -74,15 +91,9 @@ body {
         height: 50px;
         line-height: 50px;
         text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: all 0.3s ease;
+
     }
-        .header-nav__link:hover {
-            border-bottom: 2px solid white;
-        }
-        .header-nav__link.active {
-            font-family: "Roboto-Thin", sans-serif;
-        }
+
 
 .header-credits {
     color: #8adbcc;
@@ -94,6 +105,7 @@ body {
     height: 50px;
     font-size: 13px;
     font-family: "Roboto-Bold", sans-serif;
+    cursor: pointer;
 }
 
 .header-credits:hover {
@@ -132,6 +144,37 @@ body {
     .header-settings__icon {
         vertical-align: middle;
     }
+
+.header-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    min-width: 100%;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.8);
+}
+    .header-dropdown__item {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    .header-dropdown__link {
+        font-size: 13px;
+        color: white;
+        font-family: "Roboto-Light", sans-serif;
+        display: block;
+        text-decoration: none;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+        .header-dropdown__link:hover,
+        .header-dropdown__link.active{
+            font-family: "Roboto-Bold", sans-serif;
+        }
 
 .aside {
     float: left;
@@ -199,26 +242,69 @@ body {
         .aside-menu__item:hover, .aside-menu__item.active {
             font-family: "Roboto-Bold", sans-serif;
         }
-    .general {
+.general {
+    float: left;
+    margin-left: 25px;
+    width: calc(1024px - 185px);
+}
+.general-heading {
+    border-bottom: 2px solid white;
+    padding:5px 0;
+    margin-bottom: 65px;
+}
+    .general-heading__bandname {
         float: left;
-        margin-left: 25px;
-        width: calc(1024px - 185px);
+        font-size: 28px;
+        color: white;
+        font-family: "Roboto-Bold", sans-serif;
     }
-        .general-heading {
-            border-bottom: 2px solid white;
-            padding:5px 0;
-        }
-        .general-heading__bandname {
-            float: left;
-            font-size: 28px;
-            color: white;
-            font-family: "Roboto-Bold", sans-serif;
-        }
-        .general-heading__general {
-            float: right;
-            color: white;
-            position: relative;
-            top: 15px;
-            font-size: 14px;
-            font-family: "Roboto-Bold", sans-serif;
-        }
+    .general-heading__general {
+        float: right;
+        color: white;
+        position: relative;
+        top: 15px;
+        font-size: 14px;
+        font-family: "Roboto-Bold", sans-serif;
+    }
+
+.soundMobsMap {
+    width: 400px;
+    height: 215px;
+    position: relative;
+}
+    .soundMobsMap__popup {
+        font-size: 8px;
+        font-family: "Roboto-Light", sans-serif;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        background-color: rgba(0,0,0,0.8);
+        position: absolute;
+        top: -70px;
+        left: -20px;
+    }
+    .soundMobsMap__arrow {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: rgba(0,0,0,0.8) transparent transparent transparent;
+    }
+
+.soc-media {
+    float: left;
+    width: 33%;
+    padding-right: 2%;
+}
+    .soc-media__header {
+        font-family: "Roboto-Bold", sans-serif;
+        color: white;
+        font-size: 18px;
+    }
+    .soc-media__scene {
+
+    }
