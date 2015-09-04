@@ -32,6 +32,7 @@ $(document).ready(function() {
         var soundMobsMap = new Datamap({
             element: document.querySelector('.soundMobsMap'),
             scope: 'world',
+            projection: 'mercator',
             geographyConfig: {
                 popupOnHover: false,
                 highlightOnHover: false,
