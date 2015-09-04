@@ -61,7 +61,7 @@ $(document).ready(function() {
             }
         });
 
-        var bombs = [{
+        var bubbles = [{
                 highlightFillColor: '#34C3A3',
                 borderWidth: 0,
                 highlightBorderWidth: 0,
@@ -75,7 +75,7 @@ $(document).ready(function() {
         ];
 
         //draw bubbles for bombs
-        soundMobsMap.bubbles(bombs, {
+        soundMobsMap.bubbles(bubbles, {
             popupTemplate: function (geo, data) {
                 return ['<div class="soundMobsMap__popup">',
                     '<div class="soundMobsMap__text">' + data.country + '',
@@ -226,6 +226,7 @@ $(document).ready(function() {
     $(function() {
         var $progressBar = $('.js-soundMobsProgress'),
             $progressBarWidth = $progressBar.data("width");
+
         $progressBar.css({
             'width': $progressBarWidth
         });

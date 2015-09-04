@@ -272,6 +272,7 @@ body {
     width: 400px;
     height: 215px;
     position: relative;
+    float: left;
 }
     .soundMobsMap__popup {
         font-size: 8px;
@@ -574,7 +575,7 @@ body {
         }
 .venues-widget {
     float: left;
-    width: 30%;
+    width: 32%;
     padding-right: 2%;
 }
     .venues-widget__header {
@@ -626,3 +627,59 @@ body {
         .venues-widget__more:hover {
             text-decoration: none;
         }
+
+.mus-map-widget {
+    float: left;
+    width: 68%;
+}
+    .mus-map-widget__header {
+        font-family: "Roboto-Bold", sans-serif;
+        color: white;
+        font-size: 18px;
+    }
+    .mus-map-widget__details {
+        float: left;
+        width: 105px;
+        padding-top: 30px;
+    }
+    .mus-map-widget__detail {
+        margin-bottom: 5px;
+    }
+    .mus-map-widget__color-sample {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+        .mus-map-widget__color-sample--listens {
+            background-color: #4FBE9C;
+        }
+        .mus-map-widget__color-sample--venues {
+            background-color: #9A9A9A;
+        }
+        .mus-map-widget__color-sample--smobs {
+            background-color: #9A9A9A;
+        }
+    .mus-map-widget__detail-text {
+        display: inline-block;
+        font-family: "Roboto-Thin", sans-serif;
+        color: #E8E8E8;
+        font-size: 13px;
+    }
+    .mus-map-widget__totals {
+        float: right;
+        text-align: right;
+    }
+    .mus-map-widget__total {
+        margin-bottom: 5px;
+    }
+    .mus-map-widget__count {
+        color: #3ACBB2;
+        font-size: 15px;
+        display: inline-block;
+    }
+    .mus-map-widget__total-text {
+        color: #ffffff;
+        font-size: 15px;
+        display: inline-block;
+    }
