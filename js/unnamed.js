@@ -70,31 +70,45 @@ $(document).ready(function() {
         });
     });
 
+    //Soc-media Circles
     $(function() {
-        var jsonCircles = [
+        var socMediaCircles = [
             { "x_axis": 60, "y_axis": 40, "radius": 40, "color" : "#556475" },
             { "x_axis": 40, "y_axis": 100, "radius": 35, "color" : "#ffb02e"},
-            { "x_axis": 125, "y_axis": 75, "radius": 50, "color" : "#83e2ff"},
-            { "x_axis": 130, "y_axis": 110, "radius": 30, "color" : "#1c5b97"}
+            { "x_axis": 125, "y_axis": 75, "radius": 55, "color" : "#83e2ff"},
+            { "x_axis": 135, "y_axis": 115, "radius": 30, "color" : "#1c5b97"}
         ];
 
-        var svgContainer = d3.select(".soc-media").append("svg")
-                                            .attr("width", 270)
+        var svgContainer = d3.select(".soc-media__scene").append("svg")
+                                            .attr("width", 260)
                                             .attr("height", 150);
 
         var circles = svgContainer.selectAll("circle")
-                                  .data(jsonCircles)
+                                  .data(socMediaCircles)
                                   .enter()
                                   .append("circle");
 
         var circleAttributes = circles
-                               .attr("cx", function (d) { return d.x_axis; })
-                               .attr("cy", function (d) { return d.y_axis; })
-                                .attr("r", function () { return 0; })
-                                .transition().duration(1000)
-                                .attr("r", function (d) { return d.radius; })
-                               .style("fill", function(d) { return d.color; })
-                                .style("opacity", 0.4);
+                            .attr("cx", function (d) { return d.x_axis; })
+                            .attr("cy", function (d) { return d.y_axis; })
+                            .attr("r", function () { return 0; })
+                            .transition().duration(1000)
+                            .attr("r", function (d) { return d.radius; })
+                            .style("fill", function(d) { return d.color; })
+                            .style("opacity", 0.4);
     });
+
+    //Animations
+    $(function() {
+       $('.sm-block').addClass('animated zoomIn');
+    });
+
+    //CountTo
+    $(function() {
+        $('.js-countTo').countTo({
+            speed: 1500,
+            refreshInterval: 10
+        });
+    })
 
 });

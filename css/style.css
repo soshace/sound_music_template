@@ -297,14 +297,71 @@ body {
 
 .soc-media {
     float: left;
-    width: 33%;
+    width: 30%;
     padding-right: 2%;
 }
     .soc-media__header {
         font-family: "Roboto-Bold", sans-serif;
         color: white;
         font-size: 18px;
+        margin-bottom: 10px;
     }
     .soc-media__scene {
+        margin-left: 35px;
+        position: relative;
+    }
+    .soc-media__total-num {
+        color: #3ACBB2;
+        font-size: 41px;
+        font-family: "Roboto-Bold", sans-serif;
+        text-align: center;
+    }
+    .soc-media__total-people {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: "Roboto-Bold", sans-serif;
+        text-align: center;
+    }
 
+.sm-block {
+    position: absolute;
+    display: inline-block;
+    font-family: "Roboto-Bold", sans-serif;
+}
+.sm-block--pics {
+    top: 50px;
+    left: 50px;
+}
+.sm-block--fb {
+    top: 0;
+    left: -10px;
+}
+.sm-block--tw {
+    top: 30px;
+    left: 135px;
+}
+.sm-block--sc {
+    top: 70px;
+    left: -20px;
+}
+.sm-block--vk {
+    top: 100px;
+    left: 130px;
+}
+    .sm-block__label {
+        font-size: 12px;
+        color: white;
+    }
+    .sm-block__text {
+        line-height: 1;
+    }
+    .sm-block__count {
+        display: inline-block;
+        color: #3ACBB2;
+        font-size: 13px;
+    }
+    .sm-block__people {
+        display: inline-block;
+        color: white;
+        font-size: 8px;
     }
