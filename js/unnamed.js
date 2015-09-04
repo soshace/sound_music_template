@@ -80,7 +80,7 @@ $(document).ready(function() {
         ];
 
         var svgContainer = d3.select(".soc-media__scene").append("svg")
-                                            .attr("width", 260)
+                                            .attr("width", 200)
                                             .attr("height", 150);
 
         var circles = svgContainer.selectAll("circle")
@@ -110,5 +110,100 @@ $(document).ready(function() {
             refreshInterval: 10
         });
     })
+
+    //Music Profile Widget Pie Charts
+    $(function() {
+        $('.js-musChart').each(function(index) {
+            var $val = $(this).data('val');
+            var pie = new d3pie("js-musChart-"+index, {
+                "header": {
+                    "title": {
+                        "fontSize": 24,
+                        "font": "open sans"
+                    },
+                    "subtitle": {
+                        "color": "#999999",
+                        "fontSize": 12,
+                        "font": "open sans"
+                    },
+                    "titleSubtitlePadding": 9
+                },
+                "footer": {
+                    "color": "#999999",
+                    "fontSize": 10,
+                    "font": "open sans",
+                    "location": "bottom-left"
+                },
+                "size": {
+                    "canvasHeight": 55,
+                    "canvasWidth": 55,
+                    "pieInnerRadius": "70%",
+                    "pieOuterRadius": "100%"
+                },
+                "data": {
+                    "sortOrder": "label-asc",
+                    "content": [
+                        {
+                            "label": "Rust",
+                            "value": 100 - $val,
+                            "color": "#242A2C"
+                        },
+                        {
+                            "label": "FoxPro",
+                            "value": $val,
+                            "color": "#4FBE9C"
+                        }
+                    ]
+                },
+                "labels": {
+                    "outer": {
+                        "format": "none",
+                        "pieDistance": 25
+                    },
+                    "inner": {
+                        "format": "none",
+                        "hideWhenLessThanPercentage": 100
+                    },
+                    "mainLabel": {
+                        "fontSize": 11
+                    },
+                    "percentage": {
+                        "color": "#ffffff",
+                        "decimalPlaces": 0
+                    },
+                    "value": {
+                        "color": "#adadad",
+                        "fontSize": 11
+                    },
+                    "lines": {
+                        "enabled": true
+                    },
+                    "truncation": {
+                        "enabled": true
+                    }
+                },
+                "effects": {
+                    "pullOutSegmentOnClick": {
+                        "effect": "none",
+                        "speed": 400,
+                        "size": 8
+                    },
+                    "highlightSegmentOnMouseover": false,
+                    "highlightLuminosity": -0.45
+                },
+                "misc": {
+                    "colors": {
+                        "segmentStroke": "#979797"
+                    },
+                    "canvasPadding": {
+                        "top": 0,
+                        "right": 0,
+                        "bottom": 0,
+                        "left": 0
+                    }
+                }
+            });
+        });
+    });
 
 });
