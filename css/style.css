@@ -246,7 +246,7 @@ body {
 .general {
     float: left;
     margin-left: 25px;
-    width: calc(1024px - 185px);
+    width: calc(1024px - 210px);
 }
 .general-heading {
     border-bottom: 2px solid white;
@@ -298,7 +298,7 @@ body {
 
 .soc-media {
     float: left;
-    width: 30%;
+    width: 32%;
     padding-right: 2%;
 }
     .soc-media__header {
@@ -570,5 +570,59 @@ body {
         margin-left: 25px;
     }
         .sndmobs-widget__see-more:hover {
+            text-decoration: none;
+        }
+.venues-widget {
+    float: left;
+    width: 30%;
+    padding-right: 2%;
+}
+    .venues-widget__header {
+        font-family: "Roboto Bold", sans-serif;
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .venues-widget__details {
+        font-family: "Roboto-Thin", sans-serif;
+        color: white;
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    .venues-widget__scene {
+        margin-bottom: 10px;
+    }
+    .venues-widget__item {
+        position: relative;
+        padding: 5px 10px 5px 30px;
+        margin-bottom: 10px;
+        background-color: #616161;
+    }
+        .venues-widget__item:nth-child(1) {
+            background-color: #B1AFAF;
+        }
+        .venues-widget__item:nth-child(2) {
+            background-color: #909090;
+        }
+    .venues-widget__flag {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+    .venues-widget__place {
+        font-family: "Roboto-Bold", sans-serif;
+        color: white;
+        font-size: 13px;
+    }
+    .venues-widget__address {
+        font-family: "Roboto-Thin", sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+    .venues-widget__more {
+        font-size: 12px;
+        color: white;
+    }
+        .venues-widget__more:hover {
             text-decoration: none;
         }
