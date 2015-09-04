@@ -34,14 +34,30 @@ $(document).ready(function() {
             scope: 'world',
             geographyConfig: {
                 popupOnHover: false,
-                highlightOnHover: false
+                highlightOnHover: false,
+                borderWidth: 0
             },
             fills: {
                 'niceFill': '#34C3A3',
-                defaultFill: '#B4B4B4'
+                'USA': '#B4B4B4',
+                'RUS': '#B4B4B4',
+                'PRK': '#B4B4B4',
+                'PRC': '#B4B4B4',
+                'IND': '#B4B4B4',
+                'GBR': '#B4B4B4',
+                'FRA': '#B4B4B4',
+                defaultFill: '#525252'
             },
             data: {
-                'niceFill': {fillKey: 'niceFill'}
+                'niceFill': {fillKey: 'niceFill'},
+                'RUS': {fillKey: 'RUS'},
+                'PRK': {fillKey: 'PRK'},
+                'PRC': {fillKey: 'PRC'},
+                'IND': {fillKey: 'IND'},
+                'GBR': {fillKey: 'GBR'},
+                'FRA': {fillKey: 'FRA'},
+                'CHN': {fillKey: 'USA'},
+                'USA': {fillKey: 'USA'}
             }
         });
 
@@ -203,6 +219,15 @@ $(document).ready(function() {
                     }
                 }
             });
+        });
+    });
+
+    //Sound Mobs Progressbar
+    $(function() {
+        var $progressBar = $('.js-soundMobsProgress'),
+            $progressBarWidth = $progressBar.data("width");
+        $progressBar.css({
+            'width': $progressBarWidth
         });
     });
 
